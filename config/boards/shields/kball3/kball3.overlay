@@ -1,0 +1,47 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        debounce-press-ms = <10>;
+        debounce-release-ms = <10>;
+
+        input-gpios
+            = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* BTN1 */
+            , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* BTN2 */
+            , <&xiao_d 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* BTN3 */
+            ;
+    };
+
+    default_transform: keymap_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <3>;
+        rows = <1>;
+        map = <
+            RC(0,0) RC(0,1) RC(0,2)
+        >;
+    };
+};
+
+/*
+ * Reserved for PAW3222 sensor wiring on the current PCB.
+ *
+ * The sekigon-gonnoc/zmk-driver-paw3222 overlay uses nRF GPIO port/pin
+ * numbers in NRF_PSEL(...), so do not paste xiao_d aliases directly into
+ * the SPI pinctrl block. Resolve the XIAO BLE D6/D7/D8/D9 mapping before
+ * enabling this node.
+ *
+ *   MOTION -> xiao_d 6
+ *   CS     -> xiao_d 7
+ *   SDIO   -> xiao_d 8
+ *   SCLK   -> xiao_d 9
+ *
+ * Driver reference:
+ *   https://github.com/sekigon-gonnoc/zmk-driver-paw3222
+ */

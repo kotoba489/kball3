@@ -1,0 +1,18 @@
+if SHIELD_KBALL3
+
+config ZMK_KEYBOARD_NAME
+    default "kball3"
+
+config BT
+    default y
+
+config ZMK_BLE
+    default y
+
+config ZMK_POINTING
+    default y
+
+config PAW3222
+    default y
+
+endif
