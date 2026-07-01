@@ -51,7 +51,7 @@
         L02 {
             bindings = <
 &kp SPACE
-&trans
+&kp RET
 &mo 0
             >;
         };
@@ -68,7 +68,7 @@
         blt02 {
             display-name = "Utility";
             bindings = <
-&mkp RCLK
+&bt BT_SEL 2
 &bt BT_CLR_ALL
 &to 0
             >;
