@@ -43,7 +43,7 @@
         L01 {
             bindings = <
 &mkp RCLK
-&trans
+&none
 &to 0
             >;
         };
