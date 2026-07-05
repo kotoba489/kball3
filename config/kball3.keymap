@@ -13,12 +13,7 @@
             key-positions = <0 1>;
         };
 
-        B01 {
-            bindings = <&to 4>;
-            key-positions = <2 0>;
-        };
-
-        B02 {
+        O_B {
             bindings = <&out OUT_BLE>;
             key-positions = <2 0 1>;
         };
@@ -26,6 +21,11 @@
         L_03 {
             bindings = <&to 3>;
             key-positions = <1 2>;
+        };
+
+        L_0 {
+            bindings = <&to 0>;
+            key-positions = <0 2>;
         };
     };
 
@@ -45,7 +45,7 @@
             bindings = <
 &bt BT_CLR_ALL
 &bt BT_SEL 0
-&to 0
+&out OUT_BLE
             >;
         };
 
@@ -61,24 +61,6 @@
             bindings = <
 &kp BACKSPACE
 &kp SPACE
-&to 0
-            >;
-        };
-
-        blt01 {
-            display-name = "BT";
-            bindings = <
-&bt BT_SEL 0
-&bt BT_SEL 1
-&to 0
-            >;
-        };
-
-        blt02 {
-            display-name = "BT";
-            bindings = <
-&bt BT_SEL 2
-&bt BT_CLR_ALL
 &to 0
             >;
         };
