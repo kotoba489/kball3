@@ -6,6 +6,38 @@ Seeed XIAO nRF52840 / XIAO BLE を使った、独立型トラックボール + 3
 現時点では、リポジトリ名、デバイス名、Bluetooth表示名を `kball3` として進めます。
 将来的に必要があれば、個人カスタム用リポジトリ名として `kotobo3` へのリネームも検討します。
 
+## Bluetooth接続
+
+USB電源供給のみで起動した場合でも、PCとのBluetooth接続が復帰することを確認しています。
+電源OFF/ON後にペアリング解除や再接続操作を繰り返す必要が出ないよう、Bluetoothのbond/profile情報を
+フラッシュ上のNVSへ保持する設定を有効化しています。
+
+`config/kball3.conf` では、以下の設定を追加しています。
+
+```text
+CONFIG_SETTINGS=y
+CONFIG_BT_SETTINGS=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
+CONFIG_FLASH_MAP=y
+CONFIG_NVS=y
+CONFIG_SETTINGS_NVS=y
+CONFIG_MPU_ALLOW_FLASH_WRITE=y
+```
+
+確認済みの挙動:
+
+```text
+1. USB電源供給で起動
+2. Bluetooth接続
+3. 電源OFF
+4. 再度電源ON
+5. 追加操作なしでBluetooth接続が復帰
+```
+
+初回接続や接続情報のリセットが必要な場合は、キーマップ上の `BT_CLR_ALL`、`BT_SEL 0`、
+`OUT_BLE` を使ってBluetooth接続状態を再初期化します。
+
 ## 現在のPCBピン割り当て
 
 キーは行列ではなく、各GPIOからスイッチを通ってGNDへ落とす直結配線です。
