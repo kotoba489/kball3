@@ -3,9 +3,9 @@
   "layouts": {
     "default_layout": {
       "layout": [
-        { "x": 0, "y": 0, "label": "BTN1" },
-        { "x": 1, "y": 0, "label": "BTN2" },
-        { "x": 2, "y": 0, "label": "BTN3" }
+        { "x": 0, "y": 0, "row": 0, "col": 0, "label": "BTN1" },
+        { "x": 0, "y": 1, "row": 0, "col": 1, "label": "BTN2" },
+        { "x": 0, "y": 2, "row": 0, "col": 2, "label": "BTN3" }
       ]
     }
   }
