@@ -58,7 +58,7 @@ wire_exit_d = 10.0;
 support_d = 1.5;
 support_r = support_d / 2.0;
 support_pocket_r = support_r + 0.1; // 0.1mm clearance for loose fit
-contact_angle = 45; 
+contact_angle = 50; 
 
 // Distance from ball center to support ball centers
 support_dist_to_center = ball_r + support_r; // 13.25
