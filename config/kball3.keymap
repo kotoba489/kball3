@@ -24,7 +24,7 @@
 
         default_layer {
             bindings = <
-&kp A  &mkp LCLK  &to 1
+&kp K  &mkp LCLK  &to 1
             >;
         };
 
