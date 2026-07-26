@@ -1,6 +1,6 @@
 ## 　kball3ファームウェア構築
 
-. 概要
+
 本メモは、自作トラックボールキーボード「**kball3**」（最新基板 `kball3.kicad_pcb` 準拠）における ZMK ファームウェアの構築仕様、ピン割り当て、カスタムレイヤー構成（コンボ機能・Bluetooth切替含む）、Bluetooth 接続安定化対策、および将来の ZMK バージョンアップ手順についてまとめた保存用記録です。
 
 - **GitHub リポジトリ**: `https://github.com/kotoba489/kball3`
