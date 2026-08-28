@@ -36,13 +36,13 @@
 
         layer_2 {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &to 0
+&bt BT_CLR_ALL  &bt BT_SEL 0  &to 0
             >;
         };
 
         layer_3 {
             bindings = <
-&bt BT_SEL 1  &bt BT_SEL 2  &to 0
+&bt BT_SEL 1  &bootloader    &to 0
             >;
         };
     };
