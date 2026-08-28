@@ -36,7 +36,7 @@
 
         layer_2 {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &to 0
+&bt BT_CLR      &bt BT_SEL 0  &to 0
             >;
         };
 
