@@ -17,6 +17,11 @@
             bindings = <&to 3>;
             key-positions = <1 2>;
         };
+
+        L4 {
+            bindings = <&to 4>;
+            key-positions = <0 2>;
+        };
     };
 
     keymap {
@@ -42,7 +47,13 @@
 
         layer_3 {
             bindings = <
-&bt BT_SEL 1  &bootloader    &to 0
+&bt BT_SEL 1  &bt BT_SEL 2  &to 0
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&bootloader    &bt BT_CLR      &to 0
             >;
         };
     };
